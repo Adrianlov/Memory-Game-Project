@@ -14,10 +14,16 @@ body
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    background-image: url(/Images/background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+ 
+}
+
+.background{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+   
 }
 
 .game-container{
@@ -135,6 +141,7 @@ h1{
 #countDown{
     color: aliceblue;
     font-size: 4.2rem;
+    z-index: 1;
 }
 
 #image{

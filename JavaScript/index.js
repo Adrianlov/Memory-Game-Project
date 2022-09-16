@@ -15,7 +15,7 @@ let startingSeconds = 100
 
     if(startingSeconds >= 0 ){
       let coundownEl = document.getElementById('countDown')
-      coundownEl.innerHTML = startingSeconds
+      coundownEl.textContent = startingSeconds
 
     }
 
