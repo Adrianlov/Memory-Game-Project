@@ -9,7 +9,7 @@ let mouseClickSound = document.getElementById('click-sound')
 let matchSound = document.getElementById('matchSound')
 let allCards =[]
 
-let startingSeconds = 5
+let startingSeconds = 100
   setInterval(function (){
     startingSeconds--
 
