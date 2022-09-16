@@ -9,7 +9,7 @@ let mouseClickSound = document.getElementById('click-sound')
 let matchSound = document.getElementById('matchSound')
 let allCards =[]
 
-let startingSeconds = 100
+let startingSeconds = 5
   setInterval(function (){
     startingSeconds--
 
@@ -28,6 +28,8 @@ let startingSeconds = 100
 
     if(startingSeconds === 0 ){
       alert('You Lose')
+      window.location.href = 'game.html'
+
       
     }
 
@@ -35,9 +37,7 @@ let startingSeconds = 100
   },1000)
 
 
-  function restartEl(){
-    window.location.href = 'restart.html'
-  }
+
 /* On every match this array takes plus 1 until reaches 8 for the number of cards in the game*/
 
 
