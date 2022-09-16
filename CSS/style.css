@@ -1,0 +1,195 @@
+
+
+body
+    {min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url(/Images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.overlay{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    
+    
+   
+    
+}
+
+
+
+
+
+
+#restartBTN{
+    width: 10%;
+    height: 62px;
+    margin: 0;
+    border-radius: 50px;
+    padding: 5px 5px 20px 20px;
+    
+    background:none ;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
+    color: white;
+    font-size: 1.9rem;
+    border: 4px solid white;
+    position: relative;
+    
+
+}
+
+
+#restartBTN:hover{
+    width: 11%;
+    transition: 350ms ease-out;
+    cursor: pointer;
+
+}
+
+#restartBTN::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.2em);
+}
+
+
+
+
+h1{
+    color: white;
+    font-size: 4rem;
+}
+
+
+
+
+#play{
+    width: 10%;
+    height: 62px;
+    margin: 0;
+    border-radius: 50px;
+    padding: 5px 5px 20px 20px;
+    
+    background:none ;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
+    color: white;
+    font-size: 1.9rem;
+    border: 4px solid white;
+    position: relative;
+}
+
+#play:hover{
+    width: 11%;
+    transition: 350ms ease-out;
+    cursor: pointer;
+}
+
+#play::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.2em);
+
+}
+
+
+#countDown{
+    color: aliceblue;
+    font-size: 4.2rem;
+}
+
+#image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+
+
+.game-container{
+
+  height: 1040px;
+  width : 740px;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  
+}
+
+.card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10);
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .7s;
+    
+   
+}
+
+.card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.card.flip{
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    
+}
+
+
+.front-face{
+    transform: rotateY(180deg);
+}
+
+.youWon{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
