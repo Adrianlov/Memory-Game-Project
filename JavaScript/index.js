@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.card');
+let cards = document.querySelectorAll('.card');
 
 
 let hasFlippedCard = false;
@@ -7,11 +7,24 @@ let secondCard
 let lockBoard = false
 let mouseClickSound = document.getElementById('click-sound')
 let matchSound = document.getElementById('matchSound')
+let GameSong = document.getElementById('mainSound')
+
+let clickEl= document.getElementById('clicks')
+
 let allCards =[]
+
+let addClicks = []
+
+
+
+
+
+
 
 let startingSeconds = 100
   setInterval(function (){
     startingSeconds--
+    GameSong.play()
 
     if(startingSeconds >= 0 ){
       let coundownEl = document.getElementById('countDown')
@@ -20,15 +33,16 @@ let startingSeconds = 100
     }
 
     if(allCards === 8){
-      restartEl()
+      window.location.href = 'restart.html'
      
 
    
     }
 
     if(startingSeconds === 0 ){
-      alert('You Lose')
-      window.location.href = 'game.html'
+    
+      window.location.href = 'youLose.html'
+      addClicks.textContent
 
       
     }
@@ -46,7 +60,11 @@ let startingSeconds = 100
 function flipCard(){
   if(lockBoard) return
   if(this === firstCard) return
-
+  mouseClickSound.play()
+   addClicks++
+   
+  clickEl.textContent = addClicks
+ 
   this.classList.add('flip');
 
 
@@ -69,7 +87,8 @@ function flipCard(){
 }}
 
 /*Adds an click event for every card and calls the function flipCard*/
-cards.forEach(card => card.addEventListener('click', flipCard)) 
+cards.forEach(card => card.addEventListener('click', flipCard,)) 
+
 
 
 
@@ -81,6 +100,7 @@ function checkForMatch() {
   if(firstCard.dataset.info === 
       secondCard.dataset.info){
         disableCards() 
+        matchSound.play()
         allCards++
         console.log(allCards)
         
@@ -130,4 +150,7 @@ function checkForMatch() {
  
 
 
+let old_clicks =JSON.parse(localStorage.getItem('addClicks'))
+old_clicks.push(addClicks)
 
+localStorage.setItem('data', JSON.stringify(old_clicks))
