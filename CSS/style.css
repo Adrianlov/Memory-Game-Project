@@ -2,7 +2,7 @@
 
 body
     { padding: 0;
-    margin: 0;
+     margin: 0;
     box-sizing: border-box;
     
 }
@@ -18,12 +18,19 @@ body
 }
 
 .background{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    
    
+}
+
+.topBox{
+    z-index: 1;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .game-container{
@@ -38,16 +45,25 @@ body
 .overlay{
     height: 100vh;
     width: 100%;
-    background-color: black;
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    flex-direction: column;
+  
     
-    
-   
-    
+}
+.startImage{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+
+.playText{
+    font-family: 'VT323', monospace;
+    font-size: 8rem;
+    color: #087535;
 }
 
 
@@ -55,49 +71,46 @@ body
 
 
 
-#restartBTN{
+#restartBTN {
     width: 10%;
     height: 62px;
-    margin: 0;
     border-radius: 50px;
     padding: 5px 5px 20px 20px;
-    
     background:none ;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
-    color: white;
     font-size: 1.9rem;
-    border: 4px solid white;
     position: relative;
+    border: 0;
     
+
+}
+
+#restartBTN a{
+    text-decoration: none;
+    color: #087535;
+    font-family: 'VT323', monospace;
+    font-size: 4.9rem;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: antiquewhite;
 
 }
 
 
 #restartBTN:hover{
-    width: 11%;
-    transition: 350ms ease-out;
+    transition: 150ms ease-out;
     cursor: pointer;
+    font-size: 6.9rem;
 
 }
 
-#restartBTN::before{
-    content: '';
-    position: absolute;
-    background-color: white;
-    top: 56px;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1.2em);
-}
 
 
 
-
-h1{
-    color: white;
-    font-size: 4rem;
+.youWin{
+    font-family: 'VT323', monospace;
+    font-size: 8rem;
+    color: #087535;
+    z-index: 1;
 }
 
 
@@ -109,39 +122,36 @@ h1{
     margin: 0;
     border-radius: 50px;
     padding: 5px 5px 20px 20px;
-    
     background:none ;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
-    color: white;
-    font-size: 1.9rem;
-    border: 4px solid white;
-    position: relative;
+    text-shadow: 0 0 0.105em hsl(0 0% 10% / 0.1), 0 0 0.25em currentColor;
+    font-size: 6.9rem;
+    font-family: 'VT323', monospace;
+    border: 0;
+  
+}
+
+#play a{
+    text-decoration: none;
+    color: #087535;
 }
 
 #play:hover{
-    width: 11%;
-    transition: 350ms ease-out;
+    font-size: 6.5rem;
+    transition: 150ms ease-out;
     cursor: pointer;
 }
 
-#play::before{
-    content: '';
-    position: absolute;
-    background-color: white;
-    top: 56px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1.2em);
-
-}
 
 
 #countDown{
     color: aliceblue;
     font-size: 4.2rem;
     z-index: 1;
+    font-family: 'VT323', monospace;
+    color: #40ee88;
+    border-bottom: 4px dotted white;
+    width: 10%;
+    text-align: center;
 }
 
 #image{
@@ -196,11 +206,138 @@ h1{
 }
 
 .youWon{
-    background-color: rgb(0, 0, 0);
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+
+.youLoseContainer{
+    height: 100Vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.youLose{
+    font-size: calc(1.5rem + 72px);
+    margin-top: -142px;
+    z-index: 1;
+    color: #40ee88;
+}
+
+
+#clicks{
+    color: white;
+    font-size: 4.5rem;
+    z-index: 1;
+}
+
+
+@media only screen and (max-width: 600px){
+
+/* Styling for the begin play page*/
+
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.playText{
+    font-size: calc(1.5rem + 42px);
+    text-align: center;
+}
+
+#play {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* Styling for the you win page*/
+
+.youWon{
+     width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.youWin{
+    
+    font-size: calc(1.5rem + 72px);
+    margin-top: -142px;
+    z-index: 1;
+    
+}
+
+
+#restartBTN {
+    margin-top: 10px;
+    width: 100%;
+    height: 20px;
+
+}
+
+#restartBTN a{
+    font-size: calc(1.5rem + 45px);
+    margin-bottom: 4px solid white;
+}
+
+
+#clicks{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    top: 0%;
+    right: 10%;
+}
+
+
+
+
+
+/* Styling for the game container and the cards on mobile view*/
+
+#countDown{
+    position: absolute;
+    top: 0;
+}
+
+.game-container{
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+.card{
+    height: 21%;
+    width: 22%;
+   
+}
+ 
+
+   
+
+
+    
 }
