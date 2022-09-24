@@ -58,7 +58,7 @@ let startingSeconds = 100
 
 
 function flipCard(){
-  if(lockBoard) return
+  if(lockBoard === false)
   if(this === firstCard) return
   mouseClickSound.play()
    addClicks++
@@ -150,7 +150,4 @@ function checkForMatch() {
  
 
 
-let old_clicks =JSON.parse(localStorage.getItem('addClicks'))
-old_clicks.push(addClicks)
 
-localStorage.setItem('data', JSON.stringify(old_clicks))
