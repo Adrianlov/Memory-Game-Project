@@ -8,24 +8,6 @@ in my road to become a Front End Developer.
 Users can play the game by  [Pressing Here](https://adrianlov.github.io/Memory-Game-Project/).
 
 
-# Wireframes
-___
-
-
-I drew my wireframes using Lucid, [Link Here](https://lucid.app/). I have created two wireframes for each page to show the responsiveness of my website. The links to the files are below:
-
-[Profile page (desktop view)](https://github.com/Adrianlov/Portfolio/blob/main/WireFrames/About%20Page%20Desktop%20View.jpeg) <br/>
-
-[Profile page (mobile view)](https://github.com/Adrianlov/Portfolio/blob/main/WireFrames/Home%20Page%20Mobile%20View.jpeg) <br/>
-
-[About page (desktop view)](https://github.com/Adrianlov/Portfolio/blob/main/WireFrames/About%20Page%20Desktop%20View.jpeg) <br/>
-
-[About page (mobile view)](https://github.com/Adrianlov/Portfolio/blob/main/WireFrames/About%20Page%20Desktop%20View.jpeg) <br/>
-
-[Contact page (desktop view)](https://github.com/Adrianlov/Portfolio/blob/main/WireFrames/Contact%20Page%20Desktop%20View.jpeg) <br/>
-
-[Contact page (mobile view)](https://github.com/Adrianlov/Portfolio/blob/main/WireFrames/Contact%20Page%20Mobile%20View.jpeg) <br/>
-
 
 # Features
 ___
