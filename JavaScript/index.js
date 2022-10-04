@@ -44,7 +44,7 @@ let startingSeconds = 50
 
     if(allCards === 8){
      
-      window.location.href = '/HTML/youWin.html'
+      window.location.href = '../HTML/youWin.html'
      
 
    
@@ -52,7 +52,7 @@ let startingSeconds = 50
 
     if(startingSeconds === 0 ){
     
-      window.location.href = '/HTML/youLose.html'
+      window.location.href = '../HTML/youLose.html'
      
       
     }
