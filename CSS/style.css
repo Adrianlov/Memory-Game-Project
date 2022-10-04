@@ -341,19 +341,16 @@ body
 
 #restartBTN a{
     font-size: calc(1.5rem + 45px);
-    margin-bottom: 4px solid white;
+    font-size: 2.8rem;
 }
 
 
-#clicks{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    top: 0%;
-    right: 10%;
-}
+/*You Lose page*/
 
+.youLose{
+    font-size: 3.8rem;
+    padding: 99px;
+}
 
 
 
