@@ -29,17 +29,6 @@ let YouLose = document.getElementById('youLose')
 /*..................................................*/
 
 
-/* Shows the clicks that you have made */ 
-let clickEl= document.getElementById('clicks')
-let addClicks = []
-
-/*.................................................*/
-
-
-let clicksEl = document.getElementById('clicks')
-
-
-
 
 /* The game starts */
 
@@ -55,7 +44,7 @@ let startingSeconds = 50
 
     if(allCards === 8){
      
-      window.location.href = '../HTML/youWin.html'
+      window.location.href = '/HTML/youWin.html'
      
 
    
@@ -63,7 +52,7 @@ let startingSeconds = 50
 
     if(startingSeconds === 0 ){
     
-      window.location.href = '../HTML/youLose.html'
+      window.location.href = '/HTML/youLose.html'
      
       
     }
@@ -85,18 +74,6 @@ function flipCard(){
   this.classList.add('flip');
 
    mouseClickSound.play()
-
-    addClicks++
-    clickEl.textContent = addClicks
-    
-    /* Saves each click on the local storage so it can be retrive when You Lose or You Page are active*/
-
-    let  retriveClicks = JSON.stringify(addClicks)
-    localStorage.setItem('clicks', retriveClicks)
-
-    /*................................................*/
-
-  
 
   if(!hasFlippedCard ){
     // first click
@@ -133,7 +110,7 @@ function checkForMatch() {
         disableCards() 
         matchSound.play()
         allCards++
-        console.log(allCards)
+        
         
         
         
