@@ -17,9 +17,7 @@ Play Button - Clicking the play button triggers the game to load. The user then 
 
 Restart Button - Clicking the restart button triggers the game to reload. 
 
-Sounds - I've created the main music for the game and the sound effects for the You Lose page and You Win page to keep the user more engaged in the game. 
-
-Keeping count of clicks - The clicks are being counted and displayed on You Lose page and You Win page for the user to know how many clicks he as made.
+Sounds - I've created the main music for the game and the sound effects for the Try Again page and You Win page to keep the user more engaged in the game. 
 
 Timer - When the game starts a timer is set so that the player is more engaged in the game.
 
@@ -80,3 +78,5 @@ ___
 I used the W3C HTML Validator tool to validate my HTML code.
 
 I used the W3C CSS Validator tool to validate my CSS code.
+
+I used  beautifytools.com tool to validate my javascript code
